@@ -1,4 +1,7 @@
 # Teste Técnico Rails 4
+Este projeto consiste em um teste técnico realizado em Ruby on Rails. 
+
+## Problemas / Soluções :heavy_check_mark:
 
 **Questão 1** - Desaﬁo API
 Criar um endpoint que faça a leitura de um arquivo .csv, popule o banco de dados com essas informações e com
@@ -18,6 +21,7 @@ possível;
 
 Solução: 
 
+[Solução](https://github.com/joaogdfaero/teste_tecnico_rails_3/issues/2)
 
 **Questão 2** Desaﬁo Lógica de programação
 Dado um conjunto de caracteres, você precisará extrair os "diamantes" ( <>) e as "areias" ( . ) da expressão e no
@@ -34,3 +38,13 @@ Requisitos:
 - Areia é o ponto ﬁnal.
 
 Solução: 
+
+## Tecnologias:
+
+* Ruby 3.0.2
+* Rails 7.0.4.3
+
+<br>Mentor / Leader: <strong>Marco Castro</strong>
+<br>Student / Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
+
+<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
