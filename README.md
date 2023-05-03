@@ -21,8 +21,6 @@ possível;
 
 Solução: 
 
-[Solução](https://github.com/joaogdfaero/teste_tecnico_rails_3/issues/2)
-
 **Questão 2** Desaﬁo Lógica de programação
 Dado um conjunto de caracteres, você precisará extrair os "diamantes" ( <>) e as "areias" ( . ) da expressão e no
 ﬁnal exibir a quantidade de diamantes extraídos
