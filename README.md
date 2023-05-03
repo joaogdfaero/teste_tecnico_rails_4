@@ -1,2 +1,2 @@
-# teste_tecnico_rails_4
+# Teste Técnico Rails 4
 Teste técnico realizado em Ruby On Rails.
