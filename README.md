@@ -13,7 +13,7 @@ Requisitos:
 - Seguir o Rubocop style-guide;
 - A leitura do arquivo .csv deve ser através de um endpoint diferente da listagem de títulos;
 - Ordenar pelo ano de lançamento;
-- Filtrar os registros por ano de lançamento, gênero, país*;
+- Filtrar os registros por ano de lançamento, gênero e país;
 - Garantir que não haja duplicidade de registros;
 - O projeto deve ser disponibilizado em um repositório aberto no GitHub. Envie a URL assim que
 possível;
