@@ -38,8 +38,3 @@ class TesteTecnico4
     return areia_count, diamond_count
   end
 end
-
-#input = "<><>.......<.><.><.><.>......"
-#teste = TesteTecnico4.new(input)
-#teste.remove_diamantes_e_areias
-
