@@ -1,4 +1,4 @@
-# Teste Técnico Rails 
+# Teste Técnico - Rails 
 Este projeto consiste em um teste técnico realizado em Ruby on Rails. 
 
 ## Problemas / Soluções :heavy_check_mark:
