@@ -3,6 +3,7 @@ require 'csv'
 module Api
     module v1
         class NetflixesController < ApplicationController
+            before_action :set_netflix, only: %i[show update destroy]
 
             # GET /netflixes
             def index
@@ -49,6 +50,12 @@ module Api
 
 
             private
+            # Use callbacks to share common setup or constraints between actions.
+            def set_title
+                @netflix = Netflix.find(params[:id])
+            end
+
+            # Only allow a list of trusted parameters through.
             def netflix_params
                 params.require(:netflix).permit(:id_csv, :genre, :title, :director, :cast, :country,
                                                 :published_at, :year, :rating, :duration, :listed_in, :description)
