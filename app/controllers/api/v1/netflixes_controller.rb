@@ -36,7 +36,15 @@ module Api
                     render json: {status: 'ERROR', message: 'Netflix not updated', data:@netflix.errors}, status: :unprocessable_entity
             end
 
-            # FALTA O DELETE, E O IMPORT_CSV
+            # DELETE /titles/1
+            def destroy
+                @netflix = Netflix.find(params[:id])
+                @netflix.destroy
+                render json: {status: 'SUCCESS', message: 'Deleted Netflix', data:@netflix}, stauts: :ok
+            end
+
+            # FALTA O IMPORTAR CSV
+
 
 
 
