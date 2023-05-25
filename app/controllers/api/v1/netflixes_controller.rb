@@ -57,13 +57,13 @@ module Api
                     rescue Exception => errors
                         errors << err.message
                     end
+                end
 
                 if errors.blank?
                     render json: { first_message: "Arquivo CSV importado com sucesso!" }, status: :ok
                 else
                     render json: { first_message: errors.join(', ') }, status: :unprocessable_entity
-                end
-                end
+                end  
             end
 
             private
