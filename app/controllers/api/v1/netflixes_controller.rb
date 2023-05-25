@@ -1,14 +1,13 @@
 require 'csv'
 
 module Api
-    module v1
+    module V1
         class NetflixesController < ApplicationController
             before_action :set_netflix, only: %i[show update destroy]
 
             # GET /netflixes
             def index
                 @netflixes = Netflix.all
-
                 render json: @netflixes
             end
             
@@ -35,6 +34,7 @@ module Api
                     render json: {status: 'SUCCESS', message: 'Updated Netflix', data:@netflix}, stauts: :ok
                 else
                     render json: {status: 'ERROR', message: 'Netflix not updated', data:@netflix.errors}, status: :unprocessable_entity
+                end
             end
 
             # DELETE /titles/1
@@ -42,6 +42,11 @@ module Api
                 @netflix = Netflix.find(params[:id])
                 @netflix.destroy
                 render json: {status: 'SUCCESS', message: 'Deleted Netflix', data:@netflix}, stauts: :ok
+            end
+
+            # TEST
+            def method_test
+                render json: { message: "Deu certo (teste)!" }, status: :ok
             end
 
             # IMPORT CSV
@@ -68,7 +73,7 @@ module Api
 
             private
             # Use callbacks to share common setup or constraints between actions.
-            def set_title
+            def set_netflix
                 @netflix = Netflix.find(params[:id])
             end
 
@@ -77,6 +82,7 @@ module Api
                 params.require(:netflix).permit(:id_csv, :genre, :title, :director, :cast, :country,
                                                 :published_at, :year, :rating, :duration, :listed_in, :description)
             end 
+            
         end
     end
 end
