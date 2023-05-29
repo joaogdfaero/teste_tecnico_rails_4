@@ -4,6 +4,7 @@ module Api
     module V1
         class NetflixesController < ApplicationController
             before_action :set_netflix, only: %i[show update destroy]
+            skip_before_action :verify_authenticity_token, only: [:import_csv]
 
             # GET /netflixes
             def index
