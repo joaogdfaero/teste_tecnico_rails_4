@@ -56,12 +56,12 @@ module Api
 
                 CSV.foreach(params[:csv].path, headers: true) do |row|
                     begin
-                        Netflix.create( show_id: row[0], type_title: row[1], title: row[2], director: row[3], cast: row[4],
-                      country: row[5], date_added: row[6], release_year: row[7], rating: row[8], duration: row[9],
+                        Netflix.create( genre: row[1], title: row[2], director: row[3], cast: row[4],
+                      country: row[5], published_at: row[6], year: row[7], rating: row[8], duration: row[9],
                       listed_in: row[10], description: row[11])
                     
-                    rescue Exception => errors
-                        errors << err.message
+                    rescue Exception => error
+                        errors << error.message
                     end
                 end
 
