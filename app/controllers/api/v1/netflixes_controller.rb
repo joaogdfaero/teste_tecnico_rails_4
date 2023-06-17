@@ -8,7 +8,16 @@ module Api
 
             # GET /netflixes
             def index
-                @netflixes = Netflix.all
+                @netflixes = if params['country'].present?
+                                Netflix.country(params['country'])
+                            elsif params['genre'].present?
+                                Netflix.genre(params['genre'])
+                            elsif params['year'].present?
+                                Netflix.year(params['year'])
+                            else
+                                Netflix.all.order('year ASC')
+                            end
+
                 render json: @netflixes
             end
             
@@ -57,7 +66,7 @@ module Api
                 CSV.foreach(params[:csv].path, headers: true) do |row|
                     begin
                         Netflix.create( id_csv: row[0], genre: row[1], title: row[2], director: row[3], cast: row[4],
-                      country: row[5], published_at: row[6], year: row[7], rating: row[8], duration: row[9],
+                      country: row[5], year: row[6], year: row[7], rating: row[8], duration: row[9],
                       listed_in: row[10], description: row[11])
                     
                     rescue Exception => error
@@ -81,7 +90,7 @@ module Api
             # Only allow a list of trusted parameters through.
             def netflix_params
                 params.require(:netflix).permit(:id_csv, :genre, :title, :director, :cast, :country,
-                                                :published_at, :year, :rating, :duration, :listed_in, :description)
+                                                :year, :year, :rating, :duration, :listed_in, :description)
             end 
             
         end
