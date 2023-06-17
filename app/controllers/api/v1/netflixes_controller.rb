@@ -56,7 +56,7 @@ module Api
 
                 CSV.foreach(params[:csv].path, headers: true) do |row|
                     begin
-                        Netflix.create( genre: row[1], title: row[2], director: row[3], cast: row[4],
+                        Netflix.create( id_csv: row[0], genre: row[1], title: row[2], director: row[3], cast: row[4],
                       country: row[5], published_at: row[6], year: row[7], rating: row[8], duration: row[9],
                       listed_in: row[10], description: row[11])
                     
