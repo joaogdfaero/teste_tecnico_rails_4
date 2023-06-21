@@ -18,7 +18,7 @@ module Api
                                 Netflix.all.order('year ASC')
                             end
 
-                render json: @netflixes
+                render json: @netflixes.distinct, only: [:id, :title, :genre, :year, :country, :published_at, :description]
             end
             
             # GET /netflixes/1
@@ -59,7 +59,7 @@ module Api
                 render json: { message: "Deu certo (teste)!" }, status: :ok
             end
 
-            # IMPORT CSV
+            # IMPORT_CSV
             def import_csv
                 errors = []
 
