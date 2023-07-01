@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_csv: MyString
+  genre: MyString
+  title: MyString
+  director: MyString
+  cast: MyString
+  country: MyString
+  published_at: 2023-05-15 18:09:54
+  year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyString
+  description: MyString
+
+two:
+  id_csv: MyString
+  genre: MyString
+  title: MyString
+  director: MyString
+  cast: MyString
+  country: MyString
+  published_at: 2023-05-15 18:09:54
+  year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyString
+  description: MyString
